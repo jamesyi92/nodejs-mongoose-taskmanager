@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 // Connect to MongoDB
 require('./db/mongoose');

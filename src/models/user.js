@@ -70,7 +70,7 @@ userSchema.methods.generateAuthToken = async function(){
 
   const token = jwt.sign({
     _id: user.id.toString()
-  }, 'bruhsavage');
+  }, process.env.JWT_SECRET);
 
   user.tokens = user.tokens.concat({
     token: token
